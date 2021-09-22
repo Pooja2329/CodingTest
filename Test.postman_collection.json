@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "c3db5bec-cf21-4ac9-9fe6-4c76c23b70a2",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.spacexdata.com/v5/launches/latest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code==200;\r",
+							"tests[\"Validating response body\"]=responseBody.has (\"Inspiration4 is the world’s first all-civilian mission to space. The mission will be commanded by Jared Isaacman, the 37-year-old founder and Chief Executive Officer of Shift4 Pay\");\r",
+							"\r",
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"verify Flight Number \"] = response.flight_number == 135;\r",
+							"\r",
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"verify Flight Name \"] = response.name == (\"Inspiration4\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spacexdata.com/v5/launches/latest",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spacexdata",
+						"com"
+					],
+					"path": [
+						"v5",
+						"launches",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
