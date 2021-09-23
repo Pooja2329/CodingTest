@@ -72,31 +72,9 @@ public class Blaze {
 		
 		driver.findElement(By.xpath("//input[@class='btn btn-primary']")).click();
 		
-		
-		/*String cssSelectorOfSameElements="input[type='submit'][value='Choose This Flight']";
-		List<WebElement> a=driver.findElements(By.cssSelector(cssSelectorOfSameElements));
-		a.get(0).click();
-		
-		driver.findElement(By.xpath("//input[@value='//tbody/tr[1]/td[1]/input[1]']")).click();
-		*/
-		
-		
-		//JavascriptExecutor js=(JavascriptExecutor)driver;
-		//js.executeScript("document.elementFromPoint(10, 10).click()");
-		//driver.navigate().refresh();
-
-		//wait2.until(ExpectedConditions.elementToBeClickable(By.id("fromCity"))).click();
-		//Thread.sleep(3000);
-		//wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@placeholder='From']"))).sendKeys("del");
-
-		//List<WebElement>elements=driver.findElements(By.xpath("//*[@role='option']"));
-		//elements.get(0).click();
 
 	}
 
-
-
-
-	}
+}
 
 
